@@ -7,10 +7,17 @@ $age = $_GET["age"];
 $mail = $_GET["mail"];
 
 $access = false;
-var_dump($mail);
-var_dump(strpos("@",$mail));
+// $str1 = "@";
+// var_dump($mail);
+// var_dump(strpos("a","ciao"));
 
-if(strlen($name)>3 && strpos('@',$mail)!==false && strpos('.',$mail)!==false && is_numeric($age) ){
+// echo $mail."<br>";
+// $pos = strpos($mail,'@');
+// echo  $pos."<br>";
+// var_dump($pos);
+// strpos('\.',$mail) ."<br>";
+
+if(strlen($name)>3 && strpos($mail,'@') > -1 && strpos($mail,'.') > -1 && is_numeric($age) ){
     $access = true;
 }
 
